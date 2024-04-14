@@ -2,10 +2,10 @@
 import {CanNotFly, Flyable} from "./flyable";
 
 export abstract class Animal {
-    // composition over inheritance
-    public flyAbility: Flyable = new CanNotFly(); 
-    
     private name: string = EMPTY_STRING;
+    
+    // composition over inheritance
+    protected flyAbility: Flyable = new CanNotFly();
     
     
     public set Name(newName: string) {
@@ -14,5 +14,17 @@ export abstract class Animal {
     
     public get Name(): string {
         return this.name;
+    }
+
+    public get FlyAbility(): Flyable {
+        return this.flyAbility;
+    }
+
+    public set FlyAbility(newFlyAbility: Flyable) {
+        this.flyAbility = newFlyAbility;
+    }
+    
+    public tryToFly() {
+        this.flyAbility.fly();
     }
 }
