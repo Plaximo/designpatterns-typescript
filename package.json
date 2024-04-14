@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "start": "npx tsx .\\src\\index.ts",
+    "strategy-pattern": "npx tsx .\\src\\behavioral-patterns\\strategy-pattern\\index.ts"
+  },
   "devDependencies": {
     "typescript": "^5.4.5"
   }
