@@ -1,8 +1,8 @@
-﻿import {Tower} from "./towers/tower";
-import {AoeTower} from "./towers/aoe-tower";
+﻿import {Tower} from "../shared/towers/tower";
+import {AoeTower} from "../shared/towers/aoe-tower";
 import {TowerFactory} from "./tower-factory";
-import {MissleTower} from "./towers/missle-tower";
-import {LaserTower} from "./towers/laser-tower";
+import {MissileTower} from "../shared/towers/missile-tower";
+import {LaserTower} from "../shared/towers/laser-tower";
 
 export function runFactoryPattern() {
     // bad
@@ -12,7 +12,7 @@ export function runFactoryPattern() {
     if (towerToSpawn === 'Aoe Tower') {
         spawnedTower = new AoeTower(100);
     } else if (towerToSpawn === 'Missle Tower') {
-        spawnedTower = new MissleTower(5);
+        spawnedTower = new MissileTower(5);
     } else if (towerToSpawn === 'Laser Tower') {
         spawnedTower = new LaserTower(20);
     }
@@ -20,6 +20,6 @@ export function runFactoryPattern() {
     
     // good with factory
     const towerFactory = new TowerFactory();
-    spawnedTower = towerFactory.spawnTower(towerToSpawn);
+    spawnedTower = towerFactory.createTower(towerToSpawn);
     spawnedTower.shoot();
 }
