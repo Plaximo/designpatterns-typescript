@@ -3,6 +3,7 @@ import {AoeTower} from "../shared/towers/aoe-tower";
 import {TowerFactory} from "./tower-factory";
 import {MissileTower} from "../shared/towers/missile-tower";
 import {LaserTower} from "../shared/towers/laser-tower";
+import {TowerFactory2} from "./tower-factory2";
 
 export function runFactoryPattern() {
     // bad
@@ -18,8 +19,14 @@ export function runFactoryPattern() {
     }
     spawnedTower?.shoot();
     
+    
     // good with factory
     const towerFactory = new TowerFactory();
     spawnedTower = towerFactory.createTower(towerToSpawn);
     spawnedTower.shoot();
+
+    // good with factory
+    const towerFactory2 = new TowerFactory2();
+    const goodAoeTower1 = towerFactory2.createAoeTower();
+    const goodAoeTower2 = towerFactory2.createAoeTower();
 }
