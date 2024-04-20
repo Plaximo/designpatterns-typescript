@@ -1,5 +1,6 @@
 ﻿import {AoeTower} from "../shared/towers/aoe-tower";
 import {TowerFactory} from "./simple/tower-factory";
+import {MissileTower} from "./inheritance/missile-tower";
 
 export function runFactoryMethodPattern() {
     // bad
@@ -10,4 +11,8 @@ export function runFactoryMethodPattern() {
     const towerFactory = new TowerFactory();
     const goodAoeTower1 = towerFactory.createAoeTower();
     const goodAoeTower2 = towerFactory.createAoeTower();
+    
+    // good with inheritance
+    const missileTower = new MissileTower();
+    missileTower.attack();
 }

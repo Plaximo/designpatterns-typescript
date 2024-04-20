@@ -1,5 +1,6 @@
 ﻿import { Attacker } from "./attacker";
 
+// also using facade pattern
 export abstract class AttackTower {
     private attacker: Attacker;
     
@@ -8,4 +9,8 @@ export abstract class AttackTower {
     }
     
     protected abstract createAttacker(): Attacker;
+    
+    public attack() {
+        this.attacker.attack();
+    }
 }
