@@ -1,5 +1,5 @@
 ﻿import {AoeTower} from "../shared/towers/aoe-tower";
-import {TowerFactory} from "./tower-factory";
+import {TowerFactory} from "./simple/tower-factory";
 
 export function runFactoryMethodPattern() {
     // bad

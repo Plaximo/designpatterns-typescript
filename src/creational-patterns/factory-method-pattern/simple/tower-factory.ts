@@ -1,6 +1,6 @@
-﻿import {AoeTower} from "../shared/towers/aoe-tower";
-import {MissileTower} from "../shared/towers/missile-tower";
-import {LaserTower} from "../shared/towers/laser-tower";
+﻿import {AoeTower} from "../../shared/towers/aoe-tower";
+import {MissileTower} from "../../shared/towers/missile-tower";
+import {LaserTower} from "../../shared/towers/laser-tower";
 
 // creation is put into a simple method, without polymorphism
 export class TowerFactory {
